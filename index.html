@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Tintas</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma/bulma.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="./wine_22475.png" alt="Icono de Vino">
+            </div>
+            <div class="nav-center">
+                <div class="search-container">
+                    <input type="text" id="searchBar" class="search-bar" placeholder="Buscar productos por nombre o varietal">
+                    <button id="searchButton" class="search-button">Buscar</button>
+                </div>
+            </div>
+            <div class="nav-right">
+                <img src="./shoppingcart_77968.png" alt="carrito" class="ver-carrito" id="verCarrito" >
+            </div>
+            <h1 id="cerrarModal"></h1>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <div class="banner-container">
+            <h1>Mercado de Tintas</h1>
+            <p>El mejor lugar para encontrar tus vinitos</p>
+        </div>
+    </div>
+
+    <div id="mensajeBienvenida" class="mensaje-bienvenida">
+        <button id="mensajeBienvenidaButton" class="mensaje-bienvenida-button"></button>
+    </div>
+
+    <div id="shopContent" class="shop-content"></div>
+
+    <div id="modalContainer" class="modal-container"></div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./productos.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2023 Mercado de Tintas</p>
+    </div>
+</footer>
+</html>

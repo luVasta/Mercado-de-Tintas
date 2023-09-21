@@ -1,0 +1,301 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    margin: 0;
+}
+
+/* Barra de navegación superior */
+.nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 12vh;
+    align-items: end;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Iconos en la barra de navegación */
+.nav-left img{
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    display: block;
+}
+/* Icono del carrito */
+.ver-carrito {
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+    margin-top: 3.5vh;
+    cursor: pointer;
+    display: block;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar {
+    height: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+/* Boton barra de busqueda */
+.search-button {
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Banner principal */
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("https://www.saboresdelquijote.es/imagenes/ap-vino-campo-de-calatrava.jpg");
+}
+
+.banner-container {
+    text-align: center;
+    padding: 15% 0;
+}
+
+.banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido de la tienda */
+.shop-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* Cuadro de bienvenida */
+.mensaje-bienvenida {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-bienvenida h2 {
+    color: darkslategrey;
+}
+/* Boton mensaje bienvenida */
+.mensaje-bienvenida-button {
+    background-color: #007bff;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.mensaje-bienvenida-button:hover {
+    background-color: #0056b3;
+}
+
+/* Tarjetas de productos */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    width: calc(25% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.varietal {
+    color: darkslategrey;
+}
+
+.price {
+    color: darkred;
+    font-size: 20px;
+    margin-top: auto;
+    font-weight: bold;
+}
+/* Boton de tarjetas de productos */
+.card button {
+    border: none;
+    outline: 0;
+    padding: 6px 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    margin-top: auto;
+}
+
+.card button:hover {
+    opacity: 0.7;
+    background-color: #0056b3;
+}
+
+/* Contenedor del modal del carrito */
+.modal-container {
+    width: 50%; 
+    max-height: 60%; 
+    margin: 0 10%;
+    max-height: 88vh;
+    color: black;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 1;
+    top: auto;
+    bottom: 0;
+    scrollbar-color: none;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.modal-content {
+    display: flex;
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* Encabezado del modal */
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.modal-header-title {
+    font-size: 24px;
+    justify-self: start;
+}
+
+.modal-header-button {
+    color: darkred;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Contenido del modal */
+.modal-container > .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%; 
+    margin: 10px auto;
+}
+
+/* Imagen en el modal */
+.modal-container > div > img {
+    height: 100px;
+    width: 100px;
+}
+
+/* Contenido del total en el modal */
+.total-content {
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Boton eliminar en el modal */
+.eliminar {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 3px 6px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.eliminar:hover {
+    background-color: darkred;
+}
+
+/* Pie de pagina */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
